@@ -8,11 +8,12 @@ function render() {
   const App = require('./components/App').default
   ReactDOM.render(
     <AppContainer>
-      <App/>
-    </AppContainer>
-  , el)
+      <App />
+    </AppContainer>,
+    el
+  )
 }
 
 render()
-
+// eslint-disable-next-line
 if (module.hot) module.hot.accept('./components/App', render)
