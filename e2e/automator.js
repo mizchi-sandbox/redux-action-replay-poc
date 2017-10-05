@@ -2,8 +2,7 @@
 import path from 'path'
 import puppeteer from 'puppeteer'
 import data from './action-log'
-
-declare var __store: any
+import { BACKDOOR_FOR_STORE } from 'redux-automator'
 
 const actionSeries = data.map(d => d.dispatchedAction)
 
@@ -24,9 +23,13 @@ async function getPerformanceMetrics(page) {
     metrics: await getPerformanceMetrics(page)
   })
   for (const action of actionSeries) {
-    await page.evaluate(_action => {
-      __store.dispatch(_action)
-    }, action)
+    await page.evaluate(
+      (a, backdoor) => {
+        window[backdoor].dispatch(a)
+      },
+      action,
+      BACKDOOR_FOR_STORE
+    )
 
     const index = actionSeries.indexOf(action)
     await page.screenshot({

@@ -1,7 +1,6 @@
 {
   "name": "research-playground",
-  "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -33,5 +32,8 @@
     "flow-bin": "^0.56.0",
     "puppeteer": "^0.11.0",
     "react-hot-loader": "^3.0.0-beta.7"
-  }
+  },
+  "workspaces": ["packages/*"],
+  "repository": "git@github.com:mizchi-sandbox/redux-automator-poc.git",
+  "author": "mizchi <miz404@gmail.com>"
 }

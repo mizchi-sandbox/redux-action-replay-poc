@@ -1,0 +1,12 @@
+{
+  "name": "redux-automator",
+  "main": "lib/index",
+  "version": "0.0.0",
+  "scripts": {
+    "watch": "yarn build -w",
+    "build": "babel src -d lib"
+  },
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.6"
+  }
+}
