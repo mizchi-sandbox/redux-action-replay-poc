@@ -4,6 +4,7 @@ import renderUI from './renderUI'
 import { RECORDING_START, RECORDING_END, BACKDOOR_FOR_STORE } from './constants'
 
 declare var performance
+declare var location
 
 export const replayer = (store: any) => {
   global[BACKDOOR_FOR_STORE] = store
@@ -54,7 +55,11 @@ export const recorder = (opts: { ui: boolean } = { ui: true }) => {
           },
           timestamp: performance.now()
         })
-        const seriarized = JSON.stringify(actionSeries, undefined, 2)
+        const seriarized = JSON.stringify(
+          { url: location.href, actionSeries },
+          undefined,
+          2
+        )
         if (opts.ui) {
           renderUI({ recording, result: seriarized, dispatch: store.dispatch })
         }
