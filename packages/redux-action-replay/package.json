@@ -1,5 +1,5 @@
 {
-  "name": "redux-automator",
+  "name": "redux-action-replay",
   "main": "lib/index",
   "version": "0.0.0",
   "scripts": {

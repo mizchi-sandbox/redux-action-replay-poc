@@ -1,4 +1,4 @@
-# redux-automator PoC
+# redux-action-replay PoC
 
 - Puppeteer automation by redux action log.
 - Recorder as redux-middleware

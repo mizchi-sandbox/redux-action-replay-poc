@@ -4,7 +4,7 @@ import reduxPromise from 'redux-promise'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import reducer from '../reducers'
-import { isPupetteerEnv, createAutomateStore, recorder } from 'redux-automator'
+import { isPupetteerEnv, createAutomateStore, recorder } from 'redux-action-replay'
 
 export default () => {
   if (isPupetteerEnv()) {

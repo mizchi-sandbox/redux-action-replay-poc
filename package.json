@@ -34,6 +34,6 @@
     "react-hot-loader": "^3.0.0-beta.7"
   },
   "workspaces": ["packages/*"],
-  "repository": "git@github.com:mizchi-sandbox/redux-automator-poc.git",
+  "repository": "git@github.com:mizchi-sandbox/redux-action-replay-poc.git",
   "author": "mizchi <miz404@gmail.com>"
 }
